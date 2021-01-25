@@ -1,0 +1,9 @@
+version: "3.0"
+
+services:
+  
+  gradle:
+    image: spring-boot-gradle
+    build: .
+    ports:
+      - "8080:8080"
