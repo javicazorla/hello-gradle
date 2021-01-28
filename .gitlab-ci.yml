@@ -14,4 +14,4 @@ test-job:
 deploy-job:
   stage: deploy
   script:
-    - java -jar
+    - java -jar /app.jar
