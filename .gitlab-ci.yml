@@ -4,7 +4,7 @@ default:
 build-job:
   stage: build
   script: 
-    - ./gradlew bootRun
+    - ./gradlew assemble
 
 test-job:
   stage: test
