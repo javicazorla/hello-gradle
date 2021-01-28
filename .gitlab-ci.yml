@@ -1,0 +1,17 @@
+default:
+  image: openjdk:11.0-jre-slim
+
+build-job:
+  stage: build
+  script: 
+    - gradlew assemble
+
+test-job:
+  stage: test
+  script: 
+    - echo "Testing..."
+
+deploy-job:
+  stage: deploy
+  script:
+    - java -jar
