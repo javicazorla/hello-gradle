@@ -1,5 +1,5 @@
 default:
-  image: openjdk:11.0-jre-slim
+  image: openjdk:11-jdk
 
 build-job:
   stage: build
