@@ -1,6 +1,11 @@
 default:
   image: openjdk:11-jdk
 
+test-job:
+  stage: test
+  script:
+    - ./gradlew test
+
 build-job:
   stage: build
   script: 
