@@ -7,9 +7,9 @@ pipeline {
             steps {
                 withCredentials([
                     usernamePassword(
-                        credentialsId: 'e4ece5bb-ab9d-4194-83af-47d800737040', 
+                        credentialsId: 'da142980-f458-481f-b5d5-1ea8f32e3b53', 
                         passwordVariable: 'PASS', 
-			usernameVariable: 'NAME')]
+			            usernameVariable: 'NAME')]
                 ){
                     sh './gradlew publish'
                 }
