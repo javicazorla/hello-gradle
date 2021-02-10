@@ -26,6 +26,7 @@ publishing {
 	publications {
 		bootJava(MavenPublication) {
 			artifact bootJar
+			version = '1.0.' + ( System.getenv('BUILD_NUMBER') ?: '0' ) + '-SNAPSHOT'
 			//version = '0.0.1-RELEASE'          SNAPSHOT, etc
 			//groupId = 'com.sinensia'   Solo cambia el grupo al momento de la publicación
 			//artifactId = 'hello-gradle'  Para cambiar el nombre del artefacto
