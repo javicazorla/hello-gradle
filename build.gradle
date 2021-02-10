@@ -34,11 +34,16 @@ publishing {
 	}
 	repositories {
     	    maven {
-		url "http://10.250.4.2:9082/repository/snapshots/"
+		url "http://localhost:9084/repository/maven-snapshots/"
+		credentials {
+                        username System.getenv('NAME')
+                        password System.getenv('PASS')
+		}
+/*		url "http://10.250.4.2:9082/repository/snapshots/"
 		credentials {
 			username System.getenv('NAME')
 			password System.getenv('PASS')
-		}
+		}*/
 	    }
        }
 }
