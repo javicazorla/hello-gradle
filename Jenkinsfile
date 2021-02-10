@@ -6,11 +6,13 @@ pipeline {
         stage('Publish artifacts'){
             steps {
                 withCredentials([
-                    string(credentialsId: 'gitLabPrivateToken', 
-                    variable: 'TOKEN')
-                    ]){
-                        sh './gradlew publish'
-                    }
+                    usernamePassword(
+                        credentialsId: 'e4ece5bb-ab9d-4194-83af-47d800737040', 
+                        passwordVariable: 'PASS', 
+			usernameVariable: 'NAME')]
+                ){
+                    sh './gradlew publish'
+                }
             }
         }
     }
